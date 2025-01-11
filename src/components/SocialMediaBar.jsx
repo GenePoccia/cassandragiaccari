@@ -6,24 +6,24 @@ import { ReactComponent as LinkedInIcon } from "../assets/images/socialMediaImag
 import { instagramLink, linkedinLink } from "../assets/constants";
 
 const SocialMediaContainer = styled.div`
-	position: sticky; /* Makes it stick at the top while scrolling */
-	top: 85%; /* Sticks to the very top of the viewport */
-	z-index: 1000; /* Ensures it stays above other content */
-	background-color: transparent; /* Ensures no background */
-	display: flex; /* Enables flexbox for alignment */
-	flex-direction: row; /* Aligns items horizontally */
+	position: sticky;
+	top: 85%;
+	z-index: 1000;
+	background-color: transparent;
+	display: flex;
+	flex-direction: row;
 	justify-content: center;
-	gap: 20px; /* Adds space between the icons */
+	gap: 20px;
 	height: 0;
 `;
 
 const SocialMediaLink = styled.a`
-	display: inline-block; /* Makes the icon act as a clickable block */
-	cursor: pointer; /* Changes the cursor to indicate it's clickable */
+	display: inline-block;
+	cursor: pointer;
 	transition: transform 0.3s ease;
 
 	&:hover {
-		transform: scale(1.1); /* Slightly enlarges the icon on hover */
+		transform: scale(1.1);
 	}
 `;
 
