@@ -1,22 +1,9 @@
-import "./App.css";
 import React from "react";
 
-import Background from "./components/BackgroundImages";
-import Header from "./components/Header";
-import LeftBar from "./components/LeftBar";
-import Footer from "./components/Footer";
-import SocialMedia from "./components/SocialMediaBar";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
-	return (
-		<>
-			<Header />
-			<LeftBar />
-			<SocialMedia />
-			<Background />
-			<Footer />
-		</>
-	);
+	return <LandingPage />;
 }
 
 export default App;
