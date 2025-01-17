@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "../src/app/Page";
+import App from "../src/app/page";
 import reportWebVitals from "./reportWebVitals";
 
 import { AppContextProvider } from "./contexts/AppContext";
