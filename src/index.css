@@ -1,4 +1,12 @@
 body {
   margin: 0;
+  font-family: 'PPMori', sans-serif;
+  color: rgba(255, 255, 255, 1);
+  line-height: 19.6px;
+;
 }
 
+@font-face {
+  font-family: 'PPMori';
+  src: url('../public/fonts/PPMori-Regular.otf') format("opentype");
+ }

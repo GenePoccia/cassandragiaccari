@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { ModalContext } from "../contexts/ModalContext";
+import FullScreenModal from "./ModalComponents/FullScreenModal";
 
 const HeaderContainer = styled.div`
-	position: sticky;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
 	top: 0;
-	z-index: 1000;
-	background-color: transparent;
 	display: flex;
-	flex-direction: column;
-	height: 0;
+	flex-direction: row;
+	gap: 30%;
+	justify-content: center;
+	align-items: center;
+
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.4) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
+
+	height: 90px;
 `;
 
 const HeaderTopText = styled.div`
@@ -21,10 +33,23 @@ const HeaderTopText = styled.div`
 `;
 
 const Header = () => {
+	const { handleOpen, setModalLanguage } = useContext(ModalContext);
+
+	const handleClick = (language) => (e) => {
+		e.preventDefault();
+		handleOpen();
+		setModalLanguage(language);
+	};
+
 	return (
-		<HeaderContainer>
-			<HeaderTopText>Cassandra Giaccari</HeaderTopText>
-		</HeaderContainer>
+		<>
+			<FullScreenModal />
+			<HeaderContainer>
+				<HeaderTopText onClick={handleClick("en")}>about</HeaderTopText>
+				<HeaderTopText>Cassandra Giaccari</HeaderTopText>
+				<HeaderTopText onClick={handleClick("fr")}>à propos</HeaderTopText>
+			</HeaderContainer>
+		</>
 	);
 };
 
