@@ -4,6 +4,8 @@ import { PortableText } from "@portabletext/react";
 import { AboutContext } from "../../contexts/AboutContext";
 import { ModalContext } from "../../contexts/ModalContext";
 import { myPortableTextComponents } from "../reusable/DisplaySummaryParagraph";
+import ContactMeCallout from "./ContactMeCallout";
+import SocialMediaLinks from "./SocialMediaLinks";
 
 const DescriptionContainer = styled.div`
 	min-width: 20%;
@@ -38,6 +40,8 @@ const Description = () => {
 					components={myPortableTextComponents}
 				/>
 			</PortableTextContainer>
+			<ContactMeCallout />
+			<SocialMediaLinks />
 		</DescriptionContainer>
 	);
 };
