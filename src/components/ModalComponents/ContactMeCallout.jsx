@@ -13,6 +13,8 @@ const EmailLink = styled.a`
 `;
 
 const renderCallout = (calloutObject) => {
+	if (!calloutObject) return;
+
 	const { text, textLink, href } = calloutObject;
 
 	return (

@@ -8,11 +8,9 @@ export const ModalContextProvider = ({ children }) => {
 	const [language, setLanguage] = useState("en");
 
 	const handleOpen = () => {
-		console.log("Opening Modal");
 		setIsOpen(true);
 	};
 	const handleClose = () => {
-		console.log("Closing Modal");
 		setIsOpen(false);
 	};
 	const setModalLanguage = (language) => {

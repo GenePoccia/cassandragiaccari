@@ -59,7 +59,7 @@ const Footer = () => {
 				</FooterText>
 			</LeftContainer>
 			<RightContainer>
-				<SocialMediaContainer>Contact</SocialMediaContainer>
+				<SocialMediaContainer>contact</SocialMediaContainer>
 				<SocialMediaContainer>linkedin</SocialMediaContainer>
 				<SocialMediaContainer>instagram</SocialMediaContainer>
 			</RightContainer>
