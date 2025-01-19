@@ -20,12 +20,16 @@ const style = {
 	width: "100vw",
 	height: "100vh",
 	bgcolor: "rgba(30, 28, 28, 1)",
-	display: "flex",
-
 	gap: "5%",
 	padding: "20px",
 	boxShadow: 24,
 };
+
+const CloseButtonContainer = styled.div`
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 5%;
+`;
 
 const CloseButton = styled.button`
 	background: none;
@@ -42,36 +46,44 @@ const CloseButton = styled.button`
 	}
 `;
 
+const ContentContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 5%;
+	gap: 5%;
+`;
+
 const FullScreenModal = () => {
 	const { isOpen, handleClose } = useContext(ModalContext);
 
 	return (
-		<div>
-			<Modal
-				open={isOpen}
-				aria-labelledby="modal-modal-title"
-				aria-describedby="modal-modal-description"
-			>
-				<Box sx={style}>
+		<Modal
+			open={isOpen}
+			aria-labelledby="modal-modal-title"
+			aria-describedby="modal-modal-description"
+		>
+			<Box sx={style}>
+				<CloseButtonContainer>
+					<CloseButton
+						onClick={(e) => {
+							e.stopPropagation();
+							handleClose();
+						}}
+					>
+						<img
+							src={CloseButtonSVG}
+							alt="Close button"
+						/>
+					</CloseButton>
+				</CloseButtonContainer>
+				<ContentContainer>
 					<Description />
 					<Services />
 					<Experience />
-					<Box>
-						<CloseButton
-							onClick={(e) => {
-								e.stopPropagation();
-								handleClose();
-							}}
-						>
-							<img
-								src={CloseButtonSVG}
-								alt="Close button"
-							/>
-						</CloseButton>
-					</Box>
-				</Box>
-			</Modal>
-		</div>
+				</ContentContainer>
+			</Box>
+		</Modal>
 	);
 };
 

@@ -5,7 +5,7 @@ const FooterContainer = styled.div`
 	position: fixed;
 	z-index: 100;
 	width: 100%;
-	bottom: 10%;
+	bottom: 0;
 	display: flex;
 	flex-direction: row;
 	gap: 2%;

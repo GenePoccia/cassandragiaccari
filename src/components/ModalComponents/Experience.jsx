@@ -4,13 +4,22 @@ import styled from "styled-components";
 import { AboutContext } from "../../contexts/AboutContext";
 import { ModalContext } from "../../contexts/ModalContext";
 
-const ExperiencesContainer = styled.div``;
-const ExperiencesHeader = styled.div``;
+const ExperiencesContainer = styled.div`
+	min-width: 20%;
+	max-width: 25%;
+`;
+const ExperiencesHeader = styled.div`
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 10%;
+`;
 const IndividualExperienceContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 `;
-const ExperienceSummary = styled.span``;
+const ExperienceSummary = styled.div`
+	padding-bottom: 5%;
+`;
 const CompanyName = styled.span``;
 const Role = styled.span``;
 

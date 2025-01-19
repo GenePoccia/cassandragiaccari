@@ -15,6 +15,7 @@ export const myPortableTextComponents = {
 					whiteSpace: "normal", // Allow text to wrap responsively
 					wordWrap: "break-word", // Break long words to fit container
 					overflowWrap: "break-word",
+					paddingBottom: "8%",
 				}}
 			>
 				{value.children.map((child, index) => {

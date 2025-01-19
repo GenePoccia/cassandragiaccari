@@ -4,13 +4,22 @@ import styled from "styled-components";
 import { AboutContext } from "../../contexts/AboutContext";
 import { ModalContext } from "../../contexts/ModalContext";
 
-const ServicesContainer = styled.div``;
-const ServicesHeader = styled.div``;
+const ServicesContainer = styled.div`
+	min-width: 20%;
+	max-width: 25%;
+`;
+const ServicesHeader = styled.div`
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 10%;
+`;
 const IndividualSericeContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 `;
-const Service = styled.span``;
+const Service = styled.span`
+	padding-bottom: 3%;
+`;
 
 const Services = () => {
 	const { services } = useContext(AboutContext);
