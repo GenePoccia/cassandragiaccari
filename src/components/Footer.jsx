@@ -8,9 +8,7 @@ const FooterContainer = styled.div`
 	bottom: 0;
 	display: flex;
 	flex-direction: row;
-	gap: 2%;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-between;
 
 	background: linear-gradient(
 		180deg,
@@ -18,15 +16,14 @@ const FooterContainer = styled.div`
 		rgba(0, 0, 0, 0.4) 100%
 	);
 
-	height: 130px;
+	height: 110px;
 `;
 
-const FooterTopText = styled.div`
-	font-size: 24px;
+const FooterText = styled.div`
+	font-size: 12px;
 	color: white;
 	padding-top: 20px;
 	text-align: center;
-	font-family: "Helvetica Neue", Arial, sans-serif;
 `;
 
 const JobTitleText = styled.div`
@@ -39,14 +36,33 @@ const JobTitleText = styled.div`
 	color: rgba(255, 255, 255, 1);
 `;
 
+const LeftContainer = styled.div`
+	margin-left: 5%;
+`;
+const RightContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	margin-right: 8%;
+`;
+
+const SocialMediaContainer = styled.div`
+	margin: 10%;
+`;
+
 const Footer = () => {
 	return (
 		<FooterContainer>
-			<JobTitleText>freelance designer pigiste</JobTitleText>
-			<FooterTopText>
-				© 2025 Cassandra Giaccari. All rights reserved. Tous droits réservés.
-			</FooterTopText>
-			<FooterTopText>Contact</FooterTopText>
+			<LeftContainer>
+				<JobTitleText>freelance designer pigiste</JobTitleText>
+				<FooterText>
+					© 2025 Cassandra Giaccari. All rights reserved. Tous droits réservés.
+				</FooterText>
+			</LeftContainer>
+			<RightContainer>
+				<SocialMediaContainer>Contact</SocialMediaContainer>
+				<SocialMediaContainer>linkedin</SocialMediaContainer>
+				<SocialMediaContainer>instagram</SocialMediaContainer>
+			</RightContainer>
 		</FooterContainer>
 	);
 };
