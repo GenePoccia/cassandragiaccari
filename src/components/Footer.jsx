@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+
+import { AboutContext } from "../contexts/AboutContext";
+import { ModalContext } from "../contexts/ModalContext";
 
 const FooterContainer = styled.div`
 	position: fixed;
@@ -49,19 +52,43 @@ const SocialMediaContainer = styled.div`
 	margin: 10%;
 `;
 
+const SocialMediaLink = styled.a`
+	color: inherit;
+	text-decoration: none;
+	padding-right: 2%;
+`;
+
+const renderSocialMedia = (socialMedia) => {
+	return (
+		<SocialMediaContainer key={socialMedia?.name}>
+			<SocialMediaLink
+				href={socialMedia?.url}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				{socialMedia?.name}
+			</SocialMediaLink>
+		</SocialMediaContainer>
+	);
+};
+
 const Footer = () => {
+	const { footerData } = useContext(AboutContext);
+	const { language } = useContext(ModalContext);
+
+	const { title, copyright, socialMediaLinks } = footerData;
+
+	console.log(socialMediaLinks[language].map((ele) => console.log(ele)));
 	return (
 		<FooterContainer>
 			<LeftContainer>
-				<JobTitleText>freelance designer pigiste</JobTitleText>
-				<FooterText>
-					© 2025 Cassandra Giaccari. All rights reserved. Tous droits réservés.
-				</FooterText>
+				<JobTitleText>{title[language]}</JobTitleText>
+				<FooterText>{copyright[language]}</FooterText>
 			</LeftContainer>
 			<RightContainer>
-				<SocialMediaContainer>contact</SocialMediaContainer>
-				<SocialMediaContainer>linkedin</SocialMediaContainer>
-				<SocialMediaContainer>instagram</SocialMediaContainer>
+				{socialMediaLinks[language].map((ele) => {
+					return renderSocialMedia(ele);
+				})}
 			</RightContainer>
 		</FooterContainer>
 	);
