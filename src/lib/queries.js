@@ -24,6 +24,12 @@ export const BACKGROUND_IMAGES_QUERY = `*[_type == "backgroundImages"]{
     images
 }`;
 
+export const HEADER_QUERY = `*[_type == "header"]{ 
+    _id, 
+    name,
+    about,
+}`;
+
 export const FOOTER_QUERY = `*[_type == "footer"]{ 
     _id, 
     title,
