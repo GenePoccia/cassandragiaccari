@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+import { AboutContext } from "../contexts/AboutContext";
 import { ModalContext } from "../contexts/ModalContext";
 import FullScreenModal from "./ModalComponents/FullScreenModal";
 
@@ -10,7 +11,7 @@ const HeaderContainer = styled.div`
 	top: 0;
 	display: flex;
 	flex-direction: row;
-	gap: 30%;
+	gap: 20%;
 	justify-content: center;
 	align-items: center;
 
@@ -28,12 +29,13 @@ const HeaderTopText = styled.div`
 	color: white;
 	padding-top: 20px;
 	text-align: center;
-	font-family: "Helvetica Neue", Arial, sans-serif;
 	margin-top: 25px;
+	white-space: nowrap;
 `;
 
 const Header = () => {
-	const { handleOpen, setModalLanguage } = useContext(ModalContext);
+	const { handleOpen, language, setModalLanguage } = useContext(ModalContext);
+	const { headerData } = useContext(AboutContext);
 
 	const handleClick = (language) => (e) => {
 		e.preventDefault();
@@ -41,13 +43,18 @@ const Header = () => {
 		setModalLanguage(language);
 	};
 
+	console.log(headerData);
 	return (
 		<>
 			<FullScreenModal />
 			<HeaderContainer>
-				<HeaderTopText onClick={handleClick("en")}>about</HeaderTopText>
-				<HeaderTopText>Cassandra Giaccari</HeaderTopText>
-				<HeaderTopText onClick={handleClick("fr")}>à propos</HeaderTopText>
+				<HeaderTopText onClick={handleClick("en")}>
+					{headerData?.about?.en}
+				</HeaderTopText>
+				<HeaderTopText> {headerData?.name?.[language]}</HeaderTopText>
+				<HeaderTopText onClick={handleClick("fr")}>
+					{headerData?.about?.fr}
+				</HeaderTopText>
 			</HeaderContainer>
 		</>
 	);
