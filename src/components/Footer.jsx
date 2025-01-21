@@ -39,7 +39,7 @@ const FooterText = styled.div`
 
 	@media (max-width: 700px) {
 		text-align: revert;
-		margin-bottom: 2%;
+		margin-bottom: 5%;
 	}
 `;
 
@@ -61,7 +61,7 @@ const LeftContainer = styled.div`
 	margin-left: 5%;
 
 	@media (max-width: 700px) {
-		margin-left: 5%;
+		margin-left: 8%;
 	}
 `;
 const RightContainer = styled.div`
@@ -73,7 +73,7 @@ const RightContainer = styled.div`
 	overflow-x: auto;
 
 	@media (max-width: 700px) {
-		margin-left: 5%;
+		margin-left: 8%;
 		font-size: 16px;
 	}
 `;

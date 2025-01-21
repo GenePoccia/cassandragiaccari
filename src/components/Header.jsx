@@ -23,6 +23,7 @@ const HeaderContainer = styled.div`
 
 	@media (max-width: 700px) {
 		font-size: 16px;
+		gap: 15%;
 	}
 
 	height: 90px;
