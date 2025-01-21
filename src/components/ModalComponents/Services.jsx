@@ -7,13 +7,17 @@ import { ModalContext } from "../../contexts/ModalContext";
 const ServicesContainer = styled.div`
 	min-width: 20%;
 	max-width: 25%;
+
+	@media (max-width: 1024px) {
+		max-width: none;
+	}
 `;
 const ServicesHeader = styled.div`
 	font-weight: 600;
 	margin-bottom: 10%;
 
 	@media (max-width: 1024px) {
-		margin-top: 40%;
+		margin-top: 10%;
 	}
 `;
 const IndividualSericeContainer = styled.div`

@@ -7,10 +7,18 @@ import { ModalContext } from "../../contexts/ModalContext";
 const ExperiencesContainer = styled.div`
 	min-width: 20%;
 	max-width: 25%;
+
+	@media (max-width: 1024px) {
+		max-width: none;
+	}
 `;
 const ExperiencesHeader = styled.div`
 	font-weight: 600;
 	margin-bottom: 10%;
+
+	@media (max-width: 1024px) {
+		margin-top: 10%;
+	}
 `;
 const IndividualExperienceContainer = styled.div`
 	display: flex;
