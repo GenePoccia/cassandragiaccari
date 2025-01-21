@@ -21,6 +21,10 @@ const HeaderContainer = styled.div`
 		rgba(0, 0, 0, 0) 100%
 	);
 
+	@media (max-width: 700px) {
+		font-size: 16px;
+	}
+
 	height: 90px;
 `;
 
@@ -30,6 +34,8 @@ const HeaderTopText = styled.div`
 	text-align: center;
 	margin-top: 25px;
 	white-space: nowrap;
+
+	font-weight: ${({ bold }) => (bold ? "bold" : "normal")};
 `;
 
 const Header = () => {
@@ -49,7 +55,9 @@ const Header = () => {
 				<HeaderTopText onClick={handleClick("en")}>
 					{headerData?.about?.en}
 				</HeaderTopText>
-				<HeaderTopText> {headerData?.name?.[language]}</HeaderTopText>
+				<HeaderTopText bold={true}>
+					{headerData?.name?.[language]}
+				</HeaderTopText>
 				<HeaderTopText onClick={handleClick("fr")}>
 					{headerData?.about?.fr}
 				</HeaderTopText>

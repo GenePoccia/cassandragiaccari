@@ -22,6 +22,12 @@ const FooterContainer = styled.div`
 	);
 
 	height: 110px;
+
+	@media (max-width: 700px) {
+		flex-direction: column-reverse;
+		justify-content: revert;
+		align-items: revert;
+	}
 `;
 
 const FooterText = styled.div`
@@ -30,6 +36,11 @@ const FooterText = styled.div`
 	text-align: center;
 	white-space: nowrap;
 	font-size: 12px;
+
+	@media (max-width: 700px) {
+		text-align: revert;
+		margin-bottom: 2%;
+	}
 `;
 
 const JobTitleText = styled.div`
@@ -40,10 +51,18 @@ const JobTitleText = styled.div`
 	text-decoration-skip-ink: none;
 	white-space: nowrap;
 	color: rgba(255, 255, 255, 1);
+
+	@media (max-width: 700px) {
+		display: none;
+	}
 `;
 
 const LeftContainer = styled.div`
 	margin-left: 5%;
+
+	@media (max-width: 700px) {
+		margin-left: 5%;
+	}
 `;
 const RightContainer = styled.div`
 	display: flex;
@@ -53,10 +72,12 @@ const RightContainer = styled.div`
 	align-items: center;
 	overflow-x: auto;
 
-	@media (max-width: 600px) {
-		gap: 10px;
+	@media (max-width: 700px) {
+		margin-left: 5%;
+		font-size: 16px;
 	}
 `;
+
 const SocialMediaContainer = styled.div`
 	font-size: 16px;
 	margin-top: 5%;
