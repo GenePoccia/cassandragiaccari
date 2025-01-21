@@ -25,7 +25,6 @@ const HeaderContainer = styled.div`
 `;
 
 const HeaderTopText = styled.div`
-	font-size: 30px;
 	color: white;
 	padding-top: 20px;
 	text-align: center;
@@ -43,7 +42,6 @@ const Header = () => {
 		setModalLanguage(language);
 	};
 
-	console.log(headerData);
 	return (
 		<>
 			<FullScreenModal />

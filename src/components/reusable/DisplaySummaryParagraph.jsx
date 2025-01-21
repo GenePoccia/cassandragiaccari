@@ -12,10 +12,11 @@ export const myPortableTextComponents = {
 				className="custom-paragraph"
 				style={{
 					margin: "0",
+					marginRight: "10%",
 					whiteSpace: "normal", // Allow text to wrap responsively
 					wordWrap: "break-word", // Break long words to fit container
 					overflowWrap: "break-word",
-					paddingBottom: "8%",
+					paddingBottom: "4%",
 				}}
 			>
 				{value.children.map((child, index) => {

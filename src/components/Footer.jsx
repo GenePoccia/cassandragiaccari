@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+import { PortableText } from "@portabletext/react";
 
 import { AboutContext } from "../contexts/AboutContext";
 import { ModalContext } from "../contexts/ModalContext";
@@ -12,6 +13,7 @@ const FooterContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 
 	background: linear-gradient(
 		180deg,
@@ -23,19 +25,20 @@ const FooterContainer = styled.div`
 `;
 
 const FooterText = styled.div`
-	font-size: 12px;
 	color: white;
 	padding-top: 20px;
 	text-align: center;
+	white-space: nowrap;
+	font-size: 12px;
 `;
 
 const JobTitleText = styled.div`
-	font-size: 24px;
 	font-weight: 400;
 	line-height: 33.6px;
 	text-align: left;
 	text-underline-position: from-font;
 	text-decoration-skip-ink: none;
+	white-space: nowrap;
 	color: rgba(255, 255, 255, 1);
 `;
 
@@ -45,17 +48,23 @@ const LeftContainer = styled.div`
 const RightContainer = styled.div`
 	display: flex;
 	flex-direction: row;
-	margin-right: 8%;
-`;
+	margin-right: 5%;
+	gap: 20px;
+	align-items: center;
+	overflow-x: auto;
 
+	@media (max-width: 600px) {
+		gap: 10px;
+	}
+`;
 const SocialMediaContainer = styled.div`
-	margin: 10%;
+	font-size: 16px;
+	margin-top: 5%;
 `;
 
 const SocialMediaLink = styled.a`
 	color: inherit;
 	text-decoration: none;
-	padding-right: 2%;
 `;
 
 const renderSocialMedia = (socialMedia) => {
@@ -72,17 +81,30 @@ const renderSocialMedia = (socialMedia) => {
 	);
 };
 
+const JobTitleComponent = {
+	block: {
+		normal: ({ children }) => (
+			<p style={{ margin: 0, padding: 0 }}>{children}</p>
+		),
+	},
+};
+
 const Footer = () => {
 	const { footerData } = useContext(AboutContext);
 	const { language } = useContext(ModalContext);
 
 	const { title, copyright, socialMediaLinks } = footerData;
 
-	console.log(socialMediaLinks[language].map((ele) => console.log(ele)));
+	console.log(title);
 	return (
 		<FooterContainer>
 			<LeftContainer>
-				<JobTitleText>{title[language]}</JobTitleText>
+				<JobTitleText>
+					<PortableText
+						value={title[language]}
+						components={JobTitleComponent}
+					/>
+				</JobTitleText>
 				<FooterText>{copyright[language]}</FooterText>
 			</LeftContainer>
 			<RightContainer>

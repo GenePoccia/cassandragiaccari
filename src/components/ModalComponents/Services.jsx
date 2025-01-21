@@ -9,9 +9,12 @@ const ServicesContainer = styled.div`
 	max-width: 25%;
 `;
 const ServicesHeader = styled.div`
-	font-size: 24px;
 	font-weight: 600;
 	margin-bottom: 10%;
+
+	@media (max-width: 1024px) {
+		margin-top: 40%;
+	}
 `;
 const IndividualSericeContainer = styled.div`
 	display: flex;

@@ -9,7 +9,6 @@ const ExperiencesContainer = styled.div`
 	max-width: 25%;
 `;
 const ExperiencesHeader = styled.div`
-	font-size: 24px;
 	font-weight: 600;
 	margin-bottom: 10%;
 `;

@@ -23,6 +23,8 @@ const style = {
 	gap: "5%",
 	padding: "20px",
 	boxShadow: 24,
+
+	overflowY: "auto", // Allow vertical scrolling for smaller breakpoints
 };
 
 const CloseButtonContainer = styled.div`
@@ -35,7 +37,7 @@ const CloseButton = styled.button`
 	background: none;
 	border: none;
 	color: black;
-	font-size: 16px;
+
 	cursor: pointer;
 	outline: none;
 	&:focus {
@@ -52,6 +54,10 @@ const ContentContainer = styled.div`
 	justify-content: center;
 	margin-top: 5%;
 	gap: 5%;
+
+	@media (max-width: 1024px) {
+		flex-direction: column;
+	}
 `;
 
 const FullScreenModal = () => {

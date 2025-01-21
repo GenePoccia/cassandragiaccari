@@ -4,7 +4,11 @@ import styled from "styled-components";
 import { AboutContext } from "../../contexts/AboutContext";
 import { ModalContext } from "../../contexts/ModalContext";
 
-const ContactMeContainer = styled.div``;
+const ContactMeContainer = styled.div`
+	@media (max-width: 1024px) {
+		margin-right: 5%;
+	}
+`;
 
 const ContactSpan = styled.span``;
 const EmailLink = styled.a`

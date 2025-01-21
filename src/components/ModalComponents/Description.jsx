@@ -10,11 +10,18 @@ import SocialMediaLinks from "./SocialMediaLinks";
 const DescriptionContainer = styled.div`
 	min-width: 20%;
 	max-width: 25%;
+
+	@media (max-width: 1024px) {
+		max-width: none;
+	}
 `;
 const DescriptionHeader = styled.div`
-	font-size: 24px;
 	font-weight: 600;
 	margin-bottom: 10%;
+
+	@media (max-width: 1024px) {
+		margin-bottom: 5%;
+	}
 `;
 
 const PortableTextContainer = styled.div`
