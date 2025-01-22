@@ -8,16 +8,28 @@ const BackgroundContainer = styled.div``;
 
 const EmptySectionWithBackgroundImage = styled.div`
 	width: 100%;
-	min-height: 500px;
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-image: ${(props) => `url(${props.url})`};
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: scale-down;
+	}
 `;
 
 const PageSection = ({ url }) => {
-	return <EmptySectionWithBackgroundImage url={url} />;
+	return (
+		<EmptySectionWithBackgroundImage>
+			<img
+				src={url}
+				alt="Background"
+			/>
+		</EmptySectionWithBackgroundImage>
+	);
 };
 
 const Background = () => {
