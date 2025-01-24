@@ -15,12 +15,6 @@ const FooterContainer = styled.div`
 	justify-content: space-between;
 	align-items: center;
 
-	background: linear-gradient(
-		180deg,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(0, 0, 0, 0.4) 100%
-	);
-
 	height: 110px;
 
 	@media (max-width: 700px) {
@@ -80,7 +74,6 @@ const RightContainer = styled.div`
 
 const SocialMediaContainer = styled.div`
 	font-size: 16px;
-	margin-top: 5%;
 `;
 
 const SocialMediaLink = styled.a`
@@ -116,7 +109,6 @@ const Footer = () => {
 
 	const { title, copyright, socialMediaLinks } = footerData;
 
-	console.log(title);
 	return (
 		<FooterContainer>
 			<LeftContainer>
