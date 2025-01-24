@@ -11,16 +11,10 @@ const FooterContainer = styled.div`
 	width: 100%;
 	bottom: 0;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-
+	flex-direction: column;
 	height: 110px;
 
 	@media (max-width: 700px) {
-		flex-direction: column-reverse;
-		justify-content: revert;
-		align-items: revert;
 	}
 `;
 
@@ -35,36 +29,33 @@ const FooterText = styled.div`
 		text-align: revert;
 		margin-bottom: 5%;
 	}
+
+	@media (max-width: 420px) {
+		white-space: normal;
+	}
 `;
 
 const JobTitleText = styled.div`
 	font-weight: 400;
 	line-height: 33.6px;
-	text-align: left;
 	text-underline-position: from-font;
 	text-decoration-skip-ink: none;
-	white-space: nowrap;
 	color: rgba(255, 255, 255, 1);
+	margin-left: 0;
 
 	@media (max-width: 700px) {
 		display: none;
 	}
 `;
 
-const LeftContainer = styled.div`
-	margin-left: 5%;
-
-	@media (max-width: 700px) {
-		margin-left: 8%;
-	}
-`;
-const RightContainer = styled.div`
+const BottomContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	margin-right: 5%;
+
 	gap: 20px;
 	align-items: center;
-	overflow-x: auto;
+	margin-left: 5%;
 
 	@media (max-width: 700px) {
 		margin-left: 8%;
@@ -72,7 +63,32 @@ const RightContainer = styled.div`
 	}
 `;
 
+const TopContainer = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0 5%;
+	box-sizing: border-box;
+
+	@media (max-width: 700px) {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0 8%;
+	}
+`;
+const SocialMediaLinksContainer = styled.div`
+	display: flex;
+	gap: 32px;
+
+	@media (max-width: 700px) {
+		margin-top: 10px;
+	}
+`;
+
 const SocialMediaContainer = styled.div`
+	display: flex;
+	flex-direction: row;
 	font-size: 16px;
 `;
 
@@ -111,20 +127,22 @@ const Footer = () => {
 
 	return (
 		<FooterContainer>
-			<LeftContainer>
+			<TopContainer>
 				<JobTitleText>
 					<PortableText
 						value={title[language]}
 						components={JobTitleComponent}
 					/>
 				</JobTitleText>
+				<SocialMediaLinksContainer>
+					{socialMediaLinks[language].map((ele) => {
+						return renderSocialMedia(ele);
+					})}
+				</SocialMediaLinksContainer>
+			</TopContainer>
+			<BottomContainer>
 				<FooterText>{copyright[language]}</FooterText>
-			</LeftContainer>
-			<RightContainer>
-				{socialMediaLinks[language].map((ele) => {
-					return renderSocialMedia(ele);
-				})}
-			</RightContainer>
+			</BottomContainer>
 		</FooterContainer>
 	);
 };
