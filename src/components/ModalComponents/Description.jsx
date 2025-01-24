@@ -28,6 +28,7 @@ const PortableTextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	flex: 1;
+	font-size: 14px;
 
 	@media (max-width: 1260px) {
 		max-width: none;

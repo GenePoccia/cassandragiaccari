@@ -8,6 +8,7 @@ const SocialMediaContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	padding-top: 4%;
+	font-size: 14px;
 `;
 
 const SocialMediaLinkContainer = styled.div`

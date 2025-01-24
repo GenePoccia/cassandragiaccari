@@ -17,15 +17,16 @@ const ExperiencesHeader = styled.div`
 	margin-bottom: 10%;
 
 	@media (max-width: 1024px) {
-		margin-top: 10%;
+		margin-bottom: 5%;
 	}
 `;
 const IndividualExperienceContainer = styled.div`
 	display: flex;
 	flex-direction: column;
+	font-size: 14px;
 `;
 const ExperienceSummary = styled.div`
-	padding-bottom: 5%;
+	padding-bottom: 3%;
 `;
 const CompanyName = styled.span``;
 const Role = styled.span``;

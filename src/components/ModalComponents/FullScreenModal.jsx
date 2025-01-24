@@ -31,6 +31,7 @@ const CloseButtonContainer = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	margin-right: 5%;
+	margin-top: 3%;
 `;
 
 const CloseButton = styled.button`
@@ -52,7 +53,7 @@ const ContentContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin-top: 5%;
+	margin-top: 3%;
 	gap: 5%;
 
 	@media (max-width: 1024px) {

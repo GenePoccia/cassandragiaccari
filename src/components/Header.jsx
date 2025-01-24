@@ -19,15 +19,12 @@ const HeaderContainer = styled.div`
 		font-size: 16px;
 		gap: 15%;
 	}
-
-	height: 90px;
 `;
 
 const HeaderTopText = styled.div`
 	color: white;
-	padding-top: 20px;
+	padding-top: 40px;
 	text-align: center;
-	margin-top: 25px;
 	white-space: nowrap;
 
 	${({ indentLeft }) => (indentLeft ? "margin-left: 5%;" : "")}
