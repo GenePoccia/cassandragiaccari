@@ -9,14 +9,14 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const LoaderWrapper = styled.div`
-	position: fixed; /* Sticks the loader to the full viewport */
+	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100vw; /* Full viewport width */
-	height: 100vh; /* Full viewport height */
+	width: 100vw;
+	height: 100vh;
 	display: flex;
-	justify-content: center; /* Centers the loader horizontally */
-	align-items: center; /* Centers the loader vertically */
+	justify-content: center;
+	align-items: center;
 	background-color: rgb(15, 23, 42);
 `;
 
