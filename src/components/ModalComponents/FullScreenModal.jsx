@@ -21,7 +21,6 @@ const style = {
 	height: "100vh",
 	bgcolor: "rgba(30, 28, 28, 1)",
 	gap: "5%",
-	padding: "20px",
 	boxShadow: 24,
 
 	overflowY: "auto", // Allow vertical scrolling for smaller breakpoints
@@ -30,8 +29,11 @@ const style = {
 const CloseButtonContainer = styled.div`
 	display: flex;
 	justify-content: flex-end;
-	margin-right: 5%;
-	margin-top: 3%;
+	position: sticky;
+	top: 0;
+	background-color: rgba(30, 28, 28, 1);
+	z-index: 102;
+	padding: 32px;
 `;
 
 const CloseButton = styled.button`
