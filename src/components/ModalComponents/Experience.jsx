@@ -7,6 +7,7 @@ import { ModalContext } from "../../contexts/ModalContext";
 const ExperiencesContainer = styled.div`
 	min-width: 20%;
 	max-width: 25%;
+	line-height: 19.6px;
 
 	@media (max-width: 1024px) {
 		max-width: none;

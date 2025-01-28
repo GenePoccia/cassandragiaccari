@@ -13,9 +13,6 @@ const FooterContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	height: 110px;
-
-	@media (max-width: 700px) {
-	}
 `;
 
 const FooterText = styled.div`
