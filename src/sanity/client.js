@@ -2,7 +2,7 @@ import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 
 const getDataset = () => {
-	if (process.env.NODE_ENV === "development") {
+	if (process.env.NEXT_PUBLIC_VERCEL_ENV === "development") {
 		return "staging"; // Use staging dataset
 	}
 	return "production"; // Default fallback
