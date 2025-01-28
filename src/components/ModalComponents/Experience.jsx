@@ -18,6 +18,7 @@ const ExperiencesHeader = styled.div`
 	margin-bottom: 10%;
 
 	@media (max-width: 1024px) {
+		margin-top: 5%;
 		margin-bottom: 5%;
 	}
 `;
