@@ -33,7 +33,7 @@ const CloseButtonContainer = styled.div`
 	top: 0;
 	background-color: rgba(30, 28, 28, 1);
 	z-index: 102;
-	padding: 32px;
+	padding: 32px 32px 5px 32px;
 `;
 
 const CloseButton = styled.button`
