@@ -12,31 +12,36 @@ const HeaderContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	gap: 20%;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 
-	background: linear-gradient(
-		180deg,
-		rgba(0, 0, 0, 0.4) 0%,
-		rgba(0, 0, 0, 0) 100%
-	);
-
 	@media (max-width: 700px) {
+		width: 85%;
+		gap: 0;
 		font-size: 16px;
-		gap: 15%;
+		padding: 0 8%;
 	}
-
-	height: 90px;
 `;
 
 const HeaderTopText = styled.div`
 	color: white;
-	padding-top: 20px;
+	padding-top: 40px;
 	text-align: center;
-	margin-top: 25px;
 	white-space: nowrap;
 
+	${({ indentLeft }) => (indentLeft ? "margin-left: 5%;" : "")}
+	${({ indentRight }) => (indentRight ? "margin-right: 5%;" : "")}
+
 	font-weight: ${({ bold }) => (bold ? "bold" : "normal")};
+
+	@media (max-width: 700px) {
+		${({ indentLeft }) => (indentLeft ? "margin-left: 2%;" : "")}
+		${({ indentRight }) => (indentRight ? "margin-right: 2%;" : "")}
+	}
+
+	&:hover {
+		${({ hoverable }) => (hoverable ? "cursor: pointer;" : "")}
+	}
 `;
 
 const Header = () => {
@@ -53,13 +58,21 @@ const Header = () => {
 		<>
 			<FullScreenModal />
 			<HeaderContainer>
-				<HeaderTopText onClick={handleClick("en")}>
+				<HeaderTopText
+					indentLeft={true}
+					hoverable={true}
+					onClick={handleClick("en")}
+				>
 					{headerData?.about?.en}
 				</HeaderTopText>
 				<HeaderTopText bold={true}>
 					{headerData?.name?.[language]}
 				</HeaderTopText>
-				<HeaderTopText onClick={handleClick("fr")}>
+				<HeaderTopText
+					indentRight={true}
+					hoverable={true}
+					onClick={handleClick("fr")}
+				>
 					{headerData?.about?.fr}
 				</HeaderTopText>
 			</HeaderContainer>

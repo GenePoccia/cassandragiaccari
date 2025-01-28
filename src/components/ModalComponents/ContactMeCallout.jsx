@@ -5,6 +5,8 @@ import { AboutContext } from "../../contexts/AboutContext";
 import { ModalContext } from "../../contexts/ModalContext";
 
 const ContactMeContainer = styled.div`
+	font-size: 14px;
+
 	@media (max-width: 1024px) {
 		margin-right: 5%;
 	}

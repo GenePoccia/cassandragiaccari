@@ -21,7 +21,6 @@ const style = {
 	height: "100vh",
 	bgcolor: "rgba(30, 28, 28, 1)",
 	gap: "5%",
-	padding: "20px",
 	boxShadow: 24,
 
 	overflowY: "auto", // Allow vertical scrolling for smaller breakpoints
@@ -30,7 +29,11 @@ const style = {
 const CloseButtonContainer = styled.div`
 	display: flex;
 	justify-content: flex-end;
-	margin-right: 5%;
+	position: sticky;
+	top: 0;
+	background-color: rgba(30, 28, 28, 1);
+	z-index: 102;
+	padding: 32px 32px 5px 32px;
 `;
 
 const CloseButton = styled.button`
@@ -52,11 +55,17 @@ const ContentContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin-top: 5%;
+	margin-top: 3%;
 	gap: 5%;
+	padding-bottom: 60px;
 
 	@media (max-width: 1024px) {
 		flex-direction: column;
+		padding: 60px;
+	}
+
+	@media (max-width: 700px) {
+		padding: 40px;
 	}
 `;
 

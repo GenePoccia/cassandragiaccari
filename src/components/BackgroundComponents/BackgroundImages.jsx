@@ -17,7 +17,6 @@ const EmptySectionWithBackgroundImage = styled.div`
 	img {
 		width: 100%;
 		height: auto;
-		object-fit: scale-down;
 	}
 `;
 

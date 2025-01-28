@@ -10,11 +10,13 @@ import SocialMediaLinks from "./SocialMediaLinks";
 const DescriptionContainer = styled.div`
 	min-width: 20%;
 	max-width: 25%;
+	line-height: 19.6px;
 
 	@media (max-width: 1024px) {
 		max-width: none;
 	}
 `;
+
 const DescriptionHeader = styled.div`
 	font-weight: 600;
 	margin-bottom: 10%;
@@ -28,6 +30,7 @@ const PortableTextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	flex: 1;
+	font-size: 14px;
 
 	@media (max-width: 1260px) {
 		max-width: none;

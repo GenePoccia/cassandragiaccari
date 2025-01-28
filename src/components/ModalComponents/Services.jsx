@@ -17,12 +17,14 @@ const ServicesHeader = styled.div`
 	margin-bottom: 10%;
 
 	@media (max-width: 1024px) {
-		margin-top: 10%;
+		margin-top: 5%;
+		margin-bottom: 5%;
 	}
 `;
 const IndividualSericeContainer = styled.div`
 	display: flex;
 	flex-direction: column;
+	font-size: 14px;
 `;
 const Service = styled.span`
 	padding-bottom: 3%;
