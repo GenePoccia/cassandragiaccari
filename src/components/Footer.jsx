@@ -12,7 +12,7 @@ const FooterContainer = styled.div`
 	bottom: 0;
 	display: flex;
 	flex-direction: column;
-	height: 110px;
+	height: 90px;
 `;
 
 const FooterText = styled.div`

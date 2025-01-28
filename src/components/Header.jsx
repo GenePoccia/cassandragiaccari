@@ -16,8 +16,10 @@ const HeaderContainer = styled.div`
 	align-items: center;
 
 	@media (max-width: 700px) {
+		width: 85%;
+		gap: 0;
 		font-size: 16px;
-		gap: 15%;
+		padding: 0 8%;
 	}
 `;
 
