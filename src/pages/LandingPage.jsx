@@ -44,6 +44,7 @@ function LandingPage() {
 	const { fetchAboutMeData } = useContext(AboutContext);
 	const [loaded, setLoaded] = useState(false);
 
+	console.log(process.env.NEXT_PUBLIC_VERCEL_ENV);
 	useEffect(() => {
 		fetchAboutMeData().then((resp) => setLoaded(resp));
 	}, []);
