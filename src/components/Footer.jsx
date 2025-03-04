@@ -13,6 +13,11 @@ const FooterContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	height: 90px;
+
+	@media (max-width: 700px) {
+		padding-top: 12px;
+		background-color: rgba(30, 28, 28, 1);
+	}
 `;
 
 const FooterText = styled.div`
@@ -57,6 +62,7 @@ const BottomContainer = styled.div`
 	@media (max-width: 700px) {
 		margin-left: 8%;
 		font-size: 16px;
+		padding-top: 1%;
 	}
 `;
 
