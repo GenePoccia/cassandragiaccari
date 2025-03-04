@@ -12,10 +12,13 @@ const FooterContainer = styled.div`
 	bottom: 0;
 	display: flex;
 	flex-direction: column;
-	height: 90px;
+	height: 10%;
+
+	justify-content: center;
+	align-items: left;
+	text-align: left;
 
 	@media (max-width: 700px) {
-		padding-top: 12px;
 		background-color: rgba(30, 28, 28, 1);
 	}
 `;
@@ -29,7 +32,6 @@ const FooterText = styled.div`
 
 	@media (max-width: 700px) {
 		text-align: revert;
-		margin-bottom: 5%;
 	}
 
 	@media (max-width: 420px) {
@@ -62,7 +64,6 @@ const BottomContainer = styled.div`
 	@media (max-width: 700px) {
 		margin-left: 8%;
 		font-size: 16px;
-		padding-top: 1%;
 	}
 `;
 
@@ -83,10 +84,6 @@ const TopContainer = styled.div`
 const SocialMediaLinksContainer = styled.div`
 	display: flex;
 	gap: 32px;
-
-	@media (max-width: 700px) {
-		margin-top: 10px;
-	}
 `;
 
 const SocialMediaContainer = styled.div`
