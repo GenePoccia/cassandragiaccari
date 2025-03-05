@@ -12,7 +12,7 @@ const FooterContainer = styled.div`
 	bottom: 0;
 	display: flex;
 	flex-direction: column;
-	height: 10%;
+	min-height: 100px;
 
 	justify-content: center;
 	align-items: left;
