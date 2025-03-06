@@ -18,6 +18,8 @@ const FooterContainer = styled.div`
 	align-items: left;
 	text-align: left;
 
+	padding-top: 2%;
+
 	@media (max-width: 700px) {
 		background-color: rgba(30, 28, 28, 1);
 	}
