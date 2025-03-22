@@ -13,6 +13,7 @@ const FooterContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	min-height: 100px;
+	font-size: 20px;
 
 	justify-content: center;
 	align-items: left;
@@ -65,7 +66,7 @@ const BottomContainer = styled.div`
 
 	@media (max-width: 700px) {
 		margin-left: 8%;
-		font-size: 16px;
+		height: 36px;
 	}
 `;
 
@@ -91,7 +92,7 @@ const SocialMediaLinksContainer = styled.div`
 const SocialMediaContainer = styled.div`
 	display: flex;
 	flex-direction: row;
-	font-size: 16px;
+	font-size: 14px;
 `;
 
 const SocialMediaLink = styled.a`

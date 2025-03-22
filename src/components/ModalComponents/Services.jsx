@@ -15,6 +15,7 @@ const ServicesContainer = styled.div`
 const ServicesHeader = styled.div`
 	font-weight: 600;
 	margin-bottom: 10%;
+	font-size: 20px;
 
 	@media (max-width: 1024px) {
 		margin-top: 5%;
