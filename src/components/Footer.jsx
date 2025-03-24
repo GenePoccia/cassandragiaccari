@@ -61,6 +61,7 @@ const BottomContainer = styled.div`
 	gap: 20px;
 	align-items: center;
 	margin-left: 5%;
+	height: 20px;
 
 	@media (max-width: 700px) {
 		margin-left: 8%;
