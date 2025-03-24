@@ -30,6 +30,10 @@ const HeaderTopText = styled.div`
 	text-align: center;
 	white-space: nowrap;
 
+	@media (max-width: 450px) {
+		padding-top: 20px;
+	}
+
 	${({ indentLeft }) => (indentLeft ? "margin-left: 5%;" : "")}
 	${({ indentRight }) => (indentRight ? "margin-right: 5%;" : "")}
 
