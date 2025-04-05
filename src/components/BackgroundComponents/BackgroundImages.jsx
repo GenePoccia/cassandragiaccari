@@ -18,11 +18,15 @@ const EmptySectionWithBackgroundImage = styled.div`
 		width: 100%;
 		height: auto;
 	}
+
+	@media (max-width: 700px) {
+		padding-bottom: ${(props) => (props.$isLastImage ? "100px" : "0")};
+	}
 `;
 
-const PageSection = ({ url }) => {
+const PageSection = ({ url, isLastImage }) => {
 	return (
-		<EmptySectionWithBackgroundImage>
+		<EmptySectionWithBackgroundImage $isLastImage={isLastImage}>
 			<img
 				src={url}
 				alt="Background"
@@ -42,6 +46,7 @@ const Background = () => {
 						key={index}
 						url={urlFor(image?.image?.asset).url()}
 						caption={image?.caption}
+						isLastImage={index === backgroundImages.length - 1}
 					/>
 				);
 			})}
