@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { AboutContext } from "../contexts/AboutContext";
 import { ModalContext } from "../contexts/ModalContext";
 import FullScreenModal from "./ModalComponents/FullScreenModal";
+import HamburgerSVG from "../assets/hamburger_menu.svg";
 
 const HeaderContainer = styled.div`
 	position: fixed;
@@ -22,6 +23,11 @@ const HeaderContainer = styled.div`
 	gap: 20%;
 `;
 
+const HamburgerMenuContainer = styled.button`
+	all: unset;
+	cursor: pointer;
+`;
+
 const MobileHeader = () => {
 	const { handleOpen, language, setModalLanguage } = useContext(ModalContext);
 	const { headerData } = useContext(AboutContext);
@@ -36,8 +42,13 @@ const MobileHeader = () => {
 		<>
 			<FullScreenModal />
 			<HeaderContainer>
-				<div>CG</div>
-				<div>HM</div>
+				<span>CG</span>
+				<HamburgerMenuContainer onClick={handleClick(language)}>
+					<img
+						src={HamburgerSVG}
+						alt="Hamburger Menu"
+					/>
+				</HamburgerMenuContainer>
 			</HeaderContainer>
 		</>
 	);
