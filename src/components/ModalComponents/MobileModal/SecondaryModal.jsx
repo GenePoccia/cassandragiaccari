@@ -9,7 +9,10 @@ import { AboutContext } from "../../../contexts/AboutContext";
 import { PortableText } from "@portabletext/react";
 
 import CloseButtonSVG from "../../../assets/closebutton.svg";
-import SocialMediaLinks from "../SocialMediaLinks";
+
+import Description from "../Description";
+import Services from "../Services";
+import Experience from "../Experience";
 
 const style = {
 	position: "absolute",
@@ -122,7 +125,12 @@ const SecondaryModal = () => {
 					/>
 				</CloseButton>
 			</HeaderContainer>
-			<ContentContainer>SECONDARY MODAL</ContentContainer>
+			<ContentContainer>
+				{" "}
+				<Description />
+				<Services />
+				<Experience />
+			</ContentContainer>
 		</Box>
 	);
 };
