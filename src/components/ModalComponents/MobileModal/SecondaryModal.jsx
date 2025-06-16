@@ -10,8 +10,6 @@ import { PortableText } from "@portabletext/react";
 
 import CloseButtonSVG from "../../../assets/closebutton.svg";
 import SocialMediaLinks from "../SocialMediaLinks";
-import PrimaryModal from "./PrimaryModal";
-import SecondaryModal from "./SecondaryModal";
 
 const style = {
 	position: "absolute",
@@ -100,20 +98,33 @@ const JobTitleComponent = {
 	},
 };
 
-const MobileModal = () => {
-	const { isOpen, handleClose, language, view, setView } =
-		useContext(ModalContext);
+const SecondaryModal = () => {
+	const { isOpen, handleClose, language, setView } = useContext(ModalContext);
 	const { headerData, footerData } = useContext(AboutContext);
-
+	const handleBack = () => {
+		setView("main");
+	};
 	return (
-		<Modal
-			open={isOpen}
-			aria-labelledby="modal-modal-title"
-			aria-describedby="modal-modal-description"
-		>
-			{view === "main" ? <PrimaryModal /> : <SecondaryModal />}
-		</Modal>
+		<Box sx={style}>
+			<HeaderContainer>
+				<button onClick={handleBack}>BACK BUTTON HERE</button>
+				<TitleContainer>{headerData?.name?.[language]}</TitleContainer>
+				<CloseButton
+					onClick={(e) => {
+						e.stopPropagation();
+						handleClose();
+						handleBack();
+					}}
+				>
+					<img
+						src={CloseButtonSVG}
+						alt="Close button"
+					/>
+				</CloseButton>
+			</HeaderContainer>
+			<ContentContainer>SECONDARY MODAL</ContentContainer>
+		</Box>
 	);
 };
 
-export default MobileModal;
+export default SecondaryModal;

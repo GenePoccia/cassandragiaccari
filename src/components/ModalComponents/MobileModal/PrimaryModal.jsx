@@ -10,8 +10,6 @@ import { PortableText } from "@portabletext/react";
 
 import CloseButtonSVG from "../../../assets/closebutton.svg";
 import SocialMediaLinks from "../SocialMediaLinks";
-import PrimaryModal from "./PrimaryModal";
-import SecondaryModal from "./SecondaryModal";
 
 const style = {
 	position: "absolute",
@@ -100,20 +98,43 @@ const JobTitleComponent = {
 	},
 };
 
-const MobileModal = () => {
-	const { isOpen, handleClose, language, view, setView } =
-		useContext(ModalContext);
+const PrimaryModal = () => {
+	const { isOpen, handleClose, language, setView } = useContext(ModalContext);
 	const { headerData, footerData } = useContext(AboutContext);
 
 	return (
-		<Modal
-			open={isOpen}
-			aria-labelledby="modal-modal-title"
-			aria-describedby="modal-modal-description"
-		>
-			{view === "main" ? <PrimaryModal /> : <SecondaryModal />}
-		</Modal>
+		<Box sx={style}>
+			<HeaderContainer>
+				<TitleContainer>{headerData?.name?.[language]}</TitleContainer>
+				<CloseButton
+					onClick={(e) => {
+						e.stopPropagation();
+						handleClose();
+					}}
+				>
+					<img
+						src={CloseButtonSVG}
+						alt="Close button"
+					/>
+				</CloseButton>
+			</HeaderContainer>
+			<ContentContainer>
+				<PortableText
+					value={footerData?.title[language]}
+					components={JobTitleComponent}
+				/>
+				<AboutSection>
+					<AboutButton onClick={() => setView("about")}>
+						{headerData?.about?.en} <> -&gt; </>{" "}
+					</AboutButton>
+					<AboutButton onClick={() => setView("about")}>
+						{headerData?.about?.fr} <> -&gt; </>{" "}
+					</AboutButton>
+				</AboutSection>
+				todo: contact/linkedin/instagram
+			</ContentContainer>
+		</Box>
 	);
 };
 
-export default MobileModal;
+export default PrimaryModal;
