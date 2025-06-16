@@ -96,6 +96,37 @@ const JobTitleComponent = {
 	},
 };
 
+const SocialMediaLinksContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+`;
+
+const SocialMediaContainer = styled.div`
+	display: flex;
+	font-size: 14px;
+	padding-top: 12px;
+`;
+
+const SocialMediaLink = styled.a`
+	color: inherit;
+	text-decoration: none;
+	padding: 12px 0px;
+`;
+
+const renderSocialMedia = (socialMedia) => {
+	return (
+		<SocialMediaContainer key={socialMedia?.name}>
+			<SocialMediaLink
+				href={socialMedia?.url}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				{socialMedia?.name}
+			</SocialMediaLink>
+		</SocialMediaContainer>
+	);
+};
+
 const PrimaryModal = () => {
 	const { handleClose, language, setView, setLanguage } =
 		useContext(ModalContext);
@@ -135,7 +166,11 @@ const PrimaryModal = () => {
 						{headerData?.about?.fr} <> -&gt; </>
 					</AboutButton>
 				</AboutSection>
-				todo: contact/linkedin/instagram
+				<SocialMediaLinksContainer>
+					{footerData?.socialMediaLinks[language].map((ele) => {
+						return renderSocialMedia(ele);
+					})}
+				</SocialMediaLinksContainer>
 			</ContentContainer>
 		</Box>
 	);
