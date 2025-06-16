@@ -4,13 +4,13 @@ import styled from "styled-components";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
-import { ModalContext } from "../../contexts/ModalContext";
+import { ModalContext } from "../../../contexts/ModalContext";
 
-import Description from "./Description";
-import Services from "./Services";
-import Experience from "./Experience";
+import Description from "../Description";
+import Services from "../Services";
+import Experience from "../Experience";
 
-import CloseButtonSVG from "../../assets/closebutton.svg";
+import CloseButtonSVG from "../../../assets/closebutton.svg";
 
 const style = {
 	position: "absolute",

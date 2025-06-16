@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { AboutContext } from "../contexts/AboutContext";
 import { ModalContext } from "../contexts/ModalContext";
-import FullScreenModal from "./ModalComponents/FullScreenModal";
 import HamburgerSVG from "../assets/hamburger_menu.svg";
+import MobileModal from "./ModalComponents/MobileModal/MobileModal";
 
 const HeaderContainer = styled.div`
 	position: fixed;
@@ -40,7 +40,7 @@ const MobileHeader = () => {
 
 	return (
 		<>
-			<FullScreenModal />
+			<MobileModal />
 			<HeaderContainer>
 				<span>CG</span>
 				<HamburgerMenuContainer onClick={handleClick(language)}>
