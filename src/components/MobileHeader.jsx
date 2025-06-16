@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { AboutContext } from "../contexts/AboutContext";
 import { ModalContext } from "../contexts/ModalContext";
 import HamburgerSVG from "../assets/hamburger_menu.svg";
 import MobileModal from "./ModalComponents/MobileModal/MobileModal";
@@ -30,7 +29,6 @@ const HamburgerMenuContainer = styled.button`
 
 const MobileHeader = () => {
 	const { handleOpen, language, setModalLanguage } = useContext(ModalContext);
-	const { headerData } = useContext(AboutContext);
 
 	const handleClick = (language) => (e) => {
 		e.preventDefault();

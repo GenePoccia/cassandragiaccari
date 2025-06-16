@@ -1,15 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 
 import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
 
 import { ModalContext } from "../../../contexts/ModalContext";
 import { AboutContext } from "../../../contexts/AboutContext";
 import { PortableText } from "@portabletext/react";
 
 import CloseButtonSVG from "../../../assets/closebutton.svg";
-import SocialMediaLinks from "../SocialMediaLinks";
 
 const style = {
 	position: "absolute",
@@ -99,7 +97,7 @@ const JobTitleComponent = {
 };
 
 const PrimaryModal = () => {
-	const { isOpen, handleClose, language, setView } = useContext(ModalContext);
+	const { handleClose, language, setView } = useContext(ModalContext);
 	const { headerData, footerData } = useContext(AboutContext);
 
 	return (

@@ -1,12 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 
 import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
 
 import { ModalContext } from "../../../contexts/ModalContext";
 import { AboutContext } from "../../../contexts/AboutContext";
-import { PortableText } from "@portabletext/react";
 
 import CloseButtonSVG from "../../../assets/closebutton.svg";
 
@@ -77,33 +75,9 @@ const ContentContainer = styled.div`
 
 const TitleContainer = styled.span``;
 
-const AboutSection = styled.div`
-	display: flex;
-	flex-direction: column;
-	padding: 16px 0px;
-
-	border-bottom: 1px solid white;
-`;
-const AboutButton = styled.button`
-	all: unset;
-	cursor: pointer;
-
-	padding: 16px 16px 16px 0px;
-`;
-
-const JobTitleComponent = {
-	block: {
-		normal: ({ children }) => (
-			<p style={{ margin: 0, padding: 0, width: "20%", fontSize: "44px" }}>
-				{children}
-			</p>
-		),
-	},
-};
-
 const SecondaryModal = () => {
-	const { isOpen, handleClose, language, setView } = useContext(ModalContext);
-	const { headerData, footerData } = useContext(AboutContext);
+	const { handleClose, language, setView } = useContext(ModalContext);
+	const { headerData } = useContext(AboutContext);
 	const handleBack = () => {
 		setView("main");
 	};
@@ -126,7 +100,6 @@ const SecondaryModal = () => {
 				</CloseButton>
 			</HeaderContainer>
 			<ContentContainer>
-				{" "}
 				<Description />
 				<Services />
 				<Experience />
