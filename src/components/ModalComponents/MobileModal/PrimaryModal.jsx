@@ -97,8 +97,14 @@ const JobTitleComponent = {
 };
 
 const PrimaryModal = () => {
-	const { handleClose, language, setView } = useContext(ModalContext);
+	const { handleClose, language, setView, setLanguage } =
+		useContext(ModalContext);
 	const { headerData, footerData } = useContext(AboutContext);
+
+	const handleClick = (language) => {
+		setView("about");
+		setLanguage(language);
+	};
 
 	return (
 		<Box sx={style}>
@@ -122,11 +128,11 @@ const PrimaryModal = () => {
 					components={JobTitleComponent}
 				/>
 				<AboutSection>
-					<AboutButton onClick={() => setView("about")}>
-						{headerData?.about?.en} <> -&gt; </>{" "}
+					<AboutButton onClick={() => handleClick("en")}>
+						{headerData?.about?.en} <> -&gt; </>
 					</AboutButton>
-					<AboutButton onClick={() => setView("about")}>
-						{headerData?.about?.fr} <> -&gt; </>{" "}
+					<AboutButton onClick={() => handleClick("fr")}>
+						{headerData?.about?.fr} <> -&gt; </>
 					</AboutButton>
 				</AboutSection>
 				todo: contact/linkedin/instagram

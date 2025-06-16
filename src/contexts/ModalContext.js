@@ -24,6 +24,7 @@ export const ModalContextProvider = ({ children }) => {
 		handleClose,
 		handleOpen,
 		setModalLanguage,
+		setLanguage,
 		language,
 
 		// Mobile Modal
