@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useState } from "react";
+import React, { createContext, useCallback, useState } from "react";
 import client from "../sanity/client";
 import {
 	ABOUT_QUERY,
@@ -21,7 +21,7 @@ export const AboutContextProvider = ({ children }) => {
 	const [footerData, setFooterData] = useState([]);
 	const [headerData, setHeaderData] = useState([]);
 
-	const fetchAboutMeData = async () => {
+	const fetchAboutMeData = useCallback(async () => {
 		const aboutMeResult = await client.fetch(ABOUT_QUERY, {}, QUERY_OPTIONS);
 		const servicesResult = await client.fetch(
 			SERVICES_QUERY,
@@ -47,8 +47,9 @@ export const AboutContextProvider = ({ children }) => {
 		setBackgroundImages(backgroundImagesResult[0].images);
 		setFooterData(footerResults[0]);
 		setHeaderData(headerResults[0]);
+
 		return true;
-	};
+	}, []);
 
 	const value = {
 		aboutMe,
