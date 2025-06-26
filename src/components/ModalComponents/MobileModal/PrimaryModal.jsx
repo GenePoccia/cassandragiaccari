@@ -56,18 +56,15 @@ const ContentContainer = styled.div`
 	justify-content: center;
 	margin-top: 3%;
 	gap: 5%;
-	padding-bottom: 60px;
+
+	padding-top: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 25%;
 
 	@media (max-width: 1024px) {
 		flex-direction: column;
 		padding: 60px;
-	}
-
-	@media (max-width: 700px) {
-		padding-top: 40px;
-		padding-left: 40px;
-		padding-right: 40px;
-		padding-bottom: 25%;
 	}
 `;
 

@@ -49,7 +49,7 @@ function LandingPage() {
 
 	useEffect(() => {
 		const handleResize = () => {
-			setIsMobile(window.innerWidth < 700);
+			setIsMobile(window.innerWidth < 1024);
 		};
 		handleResize();
 		window.addEventListener("resize", handleResize);

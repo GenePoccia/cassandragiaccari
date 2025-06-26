@@ -75,7 +75,11 @@ const ContentContainer = styled.div`
 	}
 `;
 
-const TitleContainer = styled.span``;
+const TitleContainer = styled.span`
+	@media (max-width: 340px) {
+		font-size: 20px;
+	}
+`;
 
 const BackButton = styled.button`
 	all: unset;

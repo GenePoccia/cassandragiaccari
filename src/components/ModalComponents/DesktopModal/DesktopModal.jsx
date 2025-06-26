@@ -59,11 +59,6 @@ const ContentContainer = styled.div`
 	gap: 5%;
 	padding-bottom: 60px;
 
-	@media (max-width: 1024px) {
-		flex-direction: column;
-		padding: 60px;
-	}
-
 	@media (max-width: 700px) {
 		padding-top: 40px;
 		padding-left: 40px;
