@@ -7,6 +7,7 @@ import { ModalContext } from "../../../contexts/ModalContext";
 import { AboutContext } from "../../../contexts/AboutContext";
 
 import CloseButtonSVG from "../../../assets/closebutton.svg";
+import LeftArrowSVG from "../../../assets/left_arrow.svg";
 
 import Description from "../Description";
 import Services from "../Services";
@@ -75,6 +76,10 @@ const ContentContainer = styled.div`
 
 const TitleContainer = styled.span``;
 
+const BackButton = styled.button`
+	all: unset;
+`;
+
 const SecondaryModal = () => {
 	const { handleClose, language, setView } = useContext(ModalContext);
 	const { headerData } = useContext(AboutContext);
@@ -84,7 +89,12 @@ const SecondaryModal = () => {
 	return (
 		<Box sx={style}>
 			<HeaderContainer>
-				<button onClick={handleBack}>BACK BUTTON HERE</button>
+				<BackButton onClick={handleBack}>
+					<img
+						src={LeftArrowSVG}
+						alt="Left Arrow"
+					/>
+				</BackButton>
 				<TitleContainer>{headerData?.name?.[language]}</TitleContainer>
 				<CloseButton
 					onClick={(e) => {

@@ -8,6 +8,7 @@ import { AboutContext } from "../../../contexts/AboutContext";
 import { PortableText } from "@portabletext/react";
 
 import CloseButtonSVG from "../../../assets/closebutton.svg";
+import RightArrowSVG from "../../../assets/right_arrow.svg";
 
 const style = {
 	position: "absolute",
@@ -82,7 +83,9 @@ const AboutSection = styled.div`
 const AboutButton = styled.button`
 	all: unset;
 	cursor: pointer;
-
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
 	padding: 16px 16px 16px 0px;
 `;
 
@@ -112,6 +115,8 @@ const SocialMediaLink = styled.a`
 	text-decoration: none;
 	padding: 12px 0px;
 `;
+
+const ArrowContainer = styled.div``;
 
 const renderSocialMedia = (socialMedia) => {
 	return (
@@ -160,10 +165,22 @@ const PrimaryModal = () => {
 				/>
 				<AboutSection>
 					<AboutButton onClick={() => handleClick("en")}>
-						{headerData?.about?.en} <> -&gt; </>
+						{headerData?.about?.en}
+						<ArrowContainer>
+							<img
+								src={RightArrowSVG}
+								alt="Right Arrow"
+							/>
+						</ArrowContainer>
 					</AboutButton>
 					<AboutButton onClick={() => handleClick("fr")}>
-						{headerData?.about?.fr} <> -&gt; </>
+						{headerData?.about?.fr}
+						<ArrowContainer>
+							<img
+								src={RightArrowSVG}
+								alt="Right Arrow"
+							/>
+						</ArrowContainer>
 					</AboutButton>
 				</AboutSection>
 				<SocialMediaLinksContainer>
