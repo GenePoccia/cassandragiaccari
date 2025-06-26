@@ -6,6 +6,7 @@ export const ModalContext = createContext();
 export const ModalContextProvider = ({ children }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [language, setLanguage] = useState("en");
+	const [view, setView] = useState("main");
 
 	const handleOpen = () => {
 		setIsOpen(true);
@@ -23,7 +24,12 @@ export const ModalContextProvider = ({ children }) => {
 		handleClose,
 		handleOpen,
 		setModalLanguage,
+		setLanguage,
 		language,
+
+		// Mobile Modal
+		view,
+		setView,
 	};
 
 	return (

@@ -4,13 +4,13 @@ import styled from "styled-components";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
-import { ModalContext } from "../../contexts/ModalContext";
+import { ModalContext } from "../../../contexts/ModalContext";
 
-import Description from "./Description";
-import Services from "./Services";
-import Experience from "./Experience";
+import Description from "../Description";
+import Services from "../Services";
+import Experience from "../Experience";
 
-import CloseButtonSVG from "../../assets/closebutton.svg";
+import CloseButtonSVG from "../../../assets/closebutton.svg";
 
 const style = {
 	position: "absolute",
@@ -58,11 +58,6 @@ const ContentContainer = styled.div`
 	margin-top: 3%;
 	gap: 5%;
 	padding-bottom: 60px;
-
-	@media (max-width: 1024px) {
-		flex-direction: column;
-		padding: 60px;
-	}
 
 	@media (max-width: 700px) {
 		padding-top: 40px;

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { AboutContext } from "../contexts/AboutContext";
 import { ModalContext } from "../contexts/ModalContext";
-import FullScreenModal from "./ModalComponents/FullScreenModal";
+import DesktopModal from "./ModalComponents/DesktopModal/DesktopModal";
 
 const HeaderContainer = styled.div`
 	position: fixed;
@@ -61,7 +61,7 @@ const Header = () => {
 
 	return (
 		<>
-			<FullScreenModal />
+			<DesktopModal />
 			<HeaderContainer>
 				<HeaderTopText
 					indentLeft={true}
