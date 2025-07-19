@@ -27,6 +27,10 @@ const HamburgerMenuContainer = styled.button`
 	cursor: pointer;
 `;
 
+const NameSpan = styled.span`
+	font-weight: 600;
+`;
+
 const MobileHeader = () => {
 	const { handleOpen, language, setModalLanguage } = useContext(ModalContext);
 
@@ -40,7 +44,7 @@ const MobileHeader = () => {
 		<>
 			<MobileModal />
 			<HeaderContainer>
-				<span>CG</span>
+				<NameSpan>CG</NameSpan>
 				<HamburgerMenuContainer onClick={handleClick(language)}>
 					<img
 						src={HamburgerSVG}
