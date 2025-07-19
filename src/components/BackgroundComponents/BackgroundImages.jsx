@@ -20,7 +20,7 @@ const EmptySectionWithBackgroundImage = styled.div`
 	}
 
 	@media (max-width: 700px) {
-		padding-bottom: ${(props) => (props.$isLastImage ? "100px" : "0")};
+		padding-bottom: ${(props) => (props.$isLastImage ? "46px" : "0")};
 	}
 `;
 

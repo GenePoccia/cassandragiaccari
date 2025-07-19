@@ -54,27 +54,29 @@ const ContentContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin-top: 3%;
 	gap: 5%;
 
-	padding-top: 40px;
+	padding-top: 24px;
 	padding-left: 40px;
 	padding-right: 40px;
 	padding-bottom: 25%;
 
 	@media (max-width: 1024px) {
 		flex-direction: column;
-		padding: 60px;
+		padding: 24px 40px 60px 40px;
 	}
 `;
 
-const TitleContainer = styled.span``;
+const TitleContainer = styled.span`
+	font-size: 20px;
+	font-weight: 600;
+`;
 
 const AboutSection = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 16px 0px;
-
+	font-size: 20px;
 	border-bottom: 1px solid white;
 `;
 const AboutButton = styled.button`
@@ -83,7 +85,7 @@ const AboutButton = styled.button`
 	display: flex;
 	flex-direction: row;
 	gap: 8px;
-	padding: 16px 16px 16px 0px;
+	padding: 6px 6px 6px 0px;
 `;
 
 const JobTitleComponent = {
@@ -99,21 +101,26 @@ const JobTitleComponent = {
 const SocialMediaLinksContainer = styled.div`
 	display: flex;
 	flex-direction: column;
+	padding-top: 24px;
+	gap: 24px;
 `;
 
 const SocialMediaContainer = styled.div`
 	display: flex;
 	font-size: 14px;
-	padding-top: 12px;
 `;
 
 const SocialMediaLink = styled.a`
 	color: inherit;
 	text-decoration: none;
-	padding: 12px 0px;
 `;
 
 const ArrowContainer = styled.div``;
+
+const PortableTextContainer = styled.div`
+	padding-bottom: 32px;
+	border-bottom: 1px solid white;
+`;
 
 const renderSocialMedia = (socialMedia) => {
 	return (
@@ -156,10 +163,12 @@ const PrimaryModal = () => {
 				</CloseButton>
 			</HeaderContainer>
 			<ContentContainer>
-				<PortableText
-					value={footerData?.title[language]}
-					components={JobTitleComponent}
-				/>
+				<PortableTextContainer>
+					<PortableText
+						value={footerData?.title[language]}
+						components={JobTitleComponent}
+					/>
+				</PortableTextContainer>
 				<AboutSection>
 					<AboutButton onClick={() => handleClick("en")}>
 						{headerData?.about?.en}
