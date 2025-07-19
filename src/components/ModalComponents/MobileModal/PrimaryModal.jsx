@@ -96,8 +96,12 @@ const JobTitleComponent = {
 			</p>
 		),
 	},
+	marks: {
+		strong: ({ children }) => (
+			<strong style={{ fontWeight: 600 }}>{children}</strong>
+		),
+	},
 };
-
 const SocialMediaLinksContainer = styled.div`
 	display: flex;
 	flex-direction: column;

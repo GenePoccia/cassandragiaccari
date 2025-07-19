@@ -18,7 +18,7 @@ const ServicesHeader = styled.div`
 	font-size: 20px;
 
 	@media (max-width: 1024px) {
-		margin-top: 5%;
+		padding-top: 32px;
 		margin-bottom: 5%;
 	}
 `;
@@ -28,7 +28,7 @@ const IndividualSericeContainer = styled.div`
 	font-size: 14px;
 `;
 const Service = styled.span`
-	padding-bottom: 3%;
+	padding-bottom: 12px;
 `;
 
 const Services = () => {

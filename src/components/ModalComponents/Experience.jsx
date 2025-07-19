@@ -8,6 +8,7 @@ const ExperiencesContainer = styled.div`
 	min-width: 20%;
 	max-width: 25%;
 	line-height: 19.6px;
+	padding-bottom: 32px;
 
 	@media (max-width: 1024px) {
 		max-width: none;
@@ -19,7 +20,7 @@ const ExperiencesHeader = styled.div`
 	font-size: 20px;
 
 	@media (max-width: 1024px) {
-		margin-top: 5%;
+		padding-top: 32px;
 		margin-bottom: 5%;
 	}
 `;
@@ -29,8 +30,9 @@ const IndividualExperienceContainer = styled.div`
 	font-size: 14px;
 `;
 const ExperienceSummary = styled.div`
-	padding-bottom: 3%;
+	padding-bottom: 8px;
 `;
+
 const CompanyName = styled.span``;
 const Role = styled.span``;
 

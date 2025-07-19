@@ -58,7 +58,6 @@ const ContentContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin-top: 3%;
 	gap: 5%;
 	padding-bottom: 60px;
 
@@ -68,7 +67,7 @@ const ContentContainer = styled.div`
 	}
 
 	@media (max-width: 700px) {
-		padding-top: 40px;
+		padding-top: 24px;
 		padding-left: 40px;
 		padding-right: 40px;
 		padding-bottom: 25%;
@@ -76,9 +75,8 @@ const ContentContainer = styled.div`
 `;
 
 const TitleContainer = styled.span`
-	@media (max-width: 340px) {
-		font-size: 20px;
-	}
+	font-size: 20px;
+	font-weight: 600;
 `;
 
 const BackButton = styled.button`
@@ -113,6 +111,8 @@ const SecondaryModal = () => {
 					<img
 						src={CloseButtonSVG}
 						alt="Close button"
+						width={16}
+						height={16}
 					/>
 				</CloseButton>
 			</HeaderContainer>
