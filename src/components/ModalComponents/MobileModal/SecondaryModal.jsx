@@ -67,7 +67,7 @@ const ContentContainer = styled.div`
 	}
 
 	@media (max-width: 700px) {
-		padding-top: 24px;
+		padding-top: 32px;
 		padding-left: 40px;
 		padding-right: 40px;
 		padding-bottom: 25%;
@@ -111,8 +111,8 @@ const SecondaryModal = () => {
 					<img
 						src={CloseButtonSVG}
 						alt="Close button"
-						width={16}
-						height={16}
+						width={14}
+						height={14}
 					/>
 				</CloseButton>
 			</HeaderContainer>

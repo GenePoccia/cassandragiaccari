@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { AboutContext } from "../../contexts/AboutContext";
 import { ModalContext } from "../../contexts/ModalContext";
@@ -27,8 +27,15 @@ const IndividualSericeContainer = styled.div`
 	flex-direction: column;
 	font-size: 14px;
 `;
+
 const Service = styled.span`
 	padding-bottom: 12px;
+
+	${(props) =>
+		props.isLast &&
+		css`
+			padding-bottom: 0;
+		`}
 `;
 
 const Services = () => {
@@ -42,7 +49,12 @@ const Services = () => {
 			<ServicesHeader>{services?.header[language]}</ServicesHeader>
 			<IndividualSericeContainer>
 				{servicesList?.map((ele, index) => (
-					<Service key={`service_${index}`}>{ele}</Service>
+					<Service
+						key={`service_${index}`}
+						isLast={index === servicesList.length - 1}
+					>
+						{ele}
+					</Service>
 				))}
 			</IndividualSericeContainer>
 		</ServicesContainer>
