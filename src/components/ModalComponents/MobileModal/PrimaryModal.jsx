@@ -31,7 +31,7 @@ const HeaderContainer = styled.div`
 	top: 0;
 	background-color: rgba(30, 28, 28, 1);
 	z-index: 102;
-	padding: 32px 32px 16px 32px;
+	padding: 17.5px 32px 17.5px 32px;
 	border-bottom: 1px solid white;
 `;
 
@@ -63,7 +63,7 @@ const ContentContainer = styled.div`
 
 	@media (max-width: 1024px) {
 		flex-direction: column;
-		padding: 24px 40px 60px 40px;
+		padding: 32px 40px 60px 40px;
 	}
 `;
 
@@ -163,6 +163,8 @@ const PrimaryModal = () => {
 					<img
 						src={CloseButtonSVG}
 						alt="Close button"
+						width={14}
+						height={14}
 					/>
 				</CloseButton>
 			</HeaderContainer>
